@@ -99,11 +99,11 @@ export default function RumsanLanding() {
 
           <nav className="hidden md:flex items-center gap-8">
             {[
-              { name: "Services", href: "#services" },
-              { name: "Products", href: "#products" },
-              { name: "Portfolio", href: "#portfolio" },
               { name: "About Us", href: "#about" },
-              { name: "Contact", href: "#contact" },
+              { name: "Portfolio", href: "#portfolio" },
+              { name: "Career", href: "#career" },
+              { name: "Services", href: "#services" },
+              { name: "Contact Us", href: "#contact" },
             ].map((item, i) => (
               <motion.div
                 key={item.name}
@@ -151,11 +151,11 @@ export default function RumsanLanding() {
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-6">
               {[
-                { name: "Services", href: "#services" },
-                { name: "Products", href: "#products" },
-                { name: "Portfolio", href: "#portfolio" },
                 { name: "About Us", href: "#about" },
-                { name: "Contact", href: "#contact" },
+                { name: "Portfolio", href: "#portfolio" },
+                { name: "Career", href: "#career" },
+                { name: "Services", href: "#services" },
+                { name: "Contact Us", href: "#contact" },
               ].map((item) => (
                 <Link
                   key={item.name}

@@ -4,35 +4,43 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Light theme with gradient-enhanced Light Blue and Light Grey */
+    --background: 0 0% 98%; /* Very light base */
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 100%; /* Pure white for cards with gradient overlay */
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 188 85% 35%; /* Rich blue from your palette */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 188 100% 95%; /* Very light blue */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 0 0% 96%; /* Light grey */
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 188 70% 85%; /* Medium light blue */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 188 30% 88%; /* Soft blue border */
+    --input: 0 0% 98%; /* Very light grey for inputs */
+    --ring: 188 85% 35%;
 
     --radius: 0.5rem;
+
+    /* Custom gradient colors */
+    --gradient-light-blue: #C7F7FF;
+    --gradient-light-grey: #F5F5F5;
+    --gradient-blue-to-grey: linear-gradient(135deg, #C7F7FF 0%, #F5F5F5 100%);
+    --gradient-grey-to-blue: linear-gradient(135deg, #F5F5F5 0%, #C7F7FF 100%);
+    --gradient-radial: radial-gradient(circle at 30% 40%, #C7F7FF 0%, #F5F5F5 50%, #FFFFFF 100%);
   }
 
   .dark {
@@ -90,8 +98,35 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Apply beautiful gradient background */
+    background: var(--gradient-radial);
+    min-height: 100vh;
   }
   html {
     @apply scroll-smooth;
+  }
+}
+
+/* Custom gradient utilities */
+@layer utilities {
+  .bg-gradient-blue-grey {
+    background: var(--gradient-blue-to-grey);
+  }
+  
+  .bg-gradient-grey-blue {
+    background: var(--gradient-grey-to-blue);
+  }
+  
+  .bg-gradient-radial {
+    background: var(--gradient-radial);
+  }
+  
+  /* Hero section gradients - smooth fade */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      rgba(199, 247, 255, 0.8) 0%, 
+      rgba(245, 245, 245, 0.6) 50%, 
+      rgba(255, 255, 255, 0.4) 80%,
+      transparent 100%);
   }
 }

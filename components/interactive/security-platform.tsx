@@ -104,30 +104,36 @@ export function SecurityPlatform() {
         <div className="bg-gray-800/50 p-3 md:p-4 rounded-lg">
           <h4 className="text-xs md:text-sm font-medium mb-2 md:mb-3">Protection Status</h4>
           <div className="space-y-1.5 md:space-y-2">
-            {[
-              { label: "Firewall", status: "Active", icon: Lock },
-              { label: "Intrusion Detection", status: "Active", icon: Eye },
-              { label: "Data Encryption", status: "Active", icon: Lock },
-              { label: "Vulnerability Scanner", status: isScanning ? "Scanning" : "Ready", icon: RefreshCw },
-            ].map((item, index) => (
-              <div key={index} className="flex justify-between items-center">
-                <div className="flex items-center gap-1.5 md:gap-2">
-                  <item.icon className="h-3 w-3 md:h-4 md:w-4 text-gray-400" />
-                  <span className="text-[10px] md:text-xs">{item.label}</span>
-                </div>
-                <span
-                  className={`text-[10px] md:text-xs ${
-                    item.status === "Active"
-                      ? "text-green-400"
-                      : item.status === "Scanning"
-                        ? "text-yellow-400"
-                        : "text-gray-400"
-                  }`}
-                >
-                  {item.status}
-                </span>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-1.5 md:gap-2">
+                <Lock className="h-3 w-3 md:h-4 md:w-4 text-gray-400" />
+                <span className="text-[10px] md:text-xs">Firewall</span>
               </div>
-            ))}
+              <span className="text-[10px] md:text-xs text-green-400">Active</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-1.5 md:gap-2">
+                <Eye className="h-3 w-3 md:h-4 md:w-4 text-gray-400" />
+                <span className="text-[10px] md:text-xs">Intrusion Detection</span>
+              </div>
+              <span className="text-[10px] md:text-xs text-green-400">Active</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-1.5 md:gap-2">
+                <Lock className="h-3 w-3 md:h-4 md:w-4 text-gray-400" />
+                <span className="text-[10px] md:text-xs">Data Encryption</span>
+              </div>
+              <span className="text-[10px] md:text-xs text-green-400">Active</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-1.5 md:gap-2">
+                <RefreshCw className="h-3 w-3 md:h-4 md:w-4 text-gray-400" />
+                <span className="text-[10px] md:text-xs">Vulnerability Scanner</span>
+              </div>
+              <span className={`text-[10px] md:text-xs ${isScanning ? "text-yellow-400" : "text-gray-400"}`}>
+                {isScanning ? "Scanning" : "Ready"}
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -143,73 +149,267 @@ export function SecurityPlatform() {
           <div className="relative h-[120px] bg-gray-900 rounded border border-gray-700 overflow-hidden">
             {/* World map grid representation */}
             <div className="absolute inset-0 grid grid-cols-12 grid-rows-6 gap-px opacity-20">
-              {Array.from({ length: 72 }).map((_, i) => (
-                <div key={i} className="border border-gray-700"></div>
-              ))}
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
+              <div className="border border-gray-700"></div>
             </div>
 
             {/* Animated threat points */}
-            {[
-              { x: "20%", y: "30%", size: 3 },
-              { x: "70%", y: "20%", size: 4 },
-              { x: "40%", y: "60%", size: 2 },
-              { x: "85%", y: "40%", size: 3 },
-              { x: "30%", y: "70%", size: 5 },
-              { x: "60%", y: "50%", size: 2 },
-            ].map((point, index) => (
-              <motion.div
-                key={index}
-                className="absolute bg-red-500 rounded-full"
-                style={{
-                  left: point.x,
-                  top: point.y,
-                  width: point.size,
-                  height: point.size,
-                }}
-                animate={{
-                  opacity: [0.3, 0.8, 0.3],
-                  scale: [1, 1.5, 1],
-                }}
-                transition={{
-                  repeat: Number.POSITIVE_INFINITY,
-                  duration: 2,
-                  delay: index * 0.3,
-                }}
-              />
-            ))}
+            <motion.div
+              className="absolute bg-red-500 rounded-full"
+              style={{
+                left: "20%",
+                top: "30%",
+                width: 3,
+                height: 3,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 2,
+                delay: 0,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500 rounded-full"
+              style={{
+                left: "70%",
+                top: "20%",
+                width: 4,
+                height: 4,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 2,
+                delay: 0.3,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500 rounded-full"
+              style={{
+                left: "40%",
+                top: "60%",
+                width: 2,
+                height: 2,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 2,
+                delay: 0.6,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500 rounded-full"
+              style={{
+                left: "85%",
+                top: "40%",
+                width: 3,
+                height: 3,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 2,
+                delay: 0.9,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500 rounded-full"
+              style={{
+                left: "30%",
+                top: "70%",
+                width: 5,
+                height: 5,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 2,
+                delay: 1.2,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500 rounded-full"
+              style={{
+                left: "60%",
+                top: "50%",
+                width: 2,
+                height: 2,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 2,
+                delay: 1.5,
+              }}
+            />
 
             {/* Connection lines */}
-            {[
-              { x1: "20%", y1: "30%", x2: "70%", y2: "20%" },
-              { x1: "70%", y1: "20%", x2: "40%", y2: "60%" },
-              { x1: "40%", y1: "60%", x2: "85%", y2: "40%" },
-              { x1: "30%", y1: "70%", x2: "60%", y2: "50%" },
-            ].map((line, index) => (
-              <motion.div
-                key={index}
-                className="absolute bg-red-500/30 h-px"
-                style={{
-                  left: line.x1,
-                  top: line.y1,
-                  width: "0%",
-                  transformOrigin: "left center",
-                  rotate: `calc(atan2(${Number.parseFloat(line.y2) - Number.parseFloat(line.y1)}, ${
-                    Number.parseFloat(line.x2) - Number.parseFloat(line.x1)
-                  }) * 180 / 3.14159deg)`,
-                }}
-                animate={{
-                  width: `calc(sqrt(pow(${Number.parseFloat(line.x2) - Number.parseFloat(line.x1)}, 2) + pow(${
-                    Number.parseFloat(line.y2) - Number.parseFloat(line.y1)
-                  }, 2)) * 100%)`,
-                  opacity: [0, 0.5, 0],
-                }}
-                transition={{
-                  repeat: Number.POSITIVE_INFINITY,
-                  duration: 3,
-                  delay: index * 0.5,
-                }}
-              />
-            ))}
+            <motion.div
+              className="absolute bg-red-500/30 h-px"
+              style={{
+                left: "20%",
+                top: "30%",
+                width: "0%",
+                transformOrigin: "left center",
+                rotate: `calc(atan2(${20 - 30}, ${70 - 20}) * 180 / 3.14159deg)`,
+              }}
+              animate={{
+                width: `calc(sqrt(pow(${70 - 20}, 2) + pow(${20 - 30}, 2)) * 100%)`,
+                opacity: [0, 0.5, 0],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 3,
+                delay: 0,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500/30 h-px"
+              style={{
+                left: "70%",
+                top: "20%",
+                width: "0%",
+                transformOrigin: "left center",
+                rotate: `calc(atan2(${60 - 20}, ${40 - 70}) * 180 / 3.14159deg)`,
+              }}
+              animate={{
+                width: `calc(sqrt(pow(${40 - 70}, 2) + pow(${60 - 20}, 2)) * 100%)`,
+                opacity: [0, 0.5, 0],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 3,
+                delay: 0.5,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500/30 h-px"
+              style={{
+                left: "40%",
+                top: "60%",
+                width: "0%",
+                transformOrigin: "left center",
+                rotate: `calc(atan2(${40 - 60}, ${85 - 40}) * 180 / 3.14159deg)`,
+              }}
+              animate={{
+                width: `calc(sqrt(pow(${85 - 40}, 2) + pow(${40 - 60}, 2)) * 100%)`,
+                opacity: [0, 0.5, 0],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 3,
+                delay: 1.0,
+              }}
+            />
+            <motion.div
+              className="absolute bg-red-500/30 h-px"
+              style={{
+                left: "30%",
+                top: "70%",
+                width: "0%",
+                transformOrigin: "left center",
+                rotate: `calc(atan2(${50 - 70}, ${60 - 30}) * 180 / 3.14159deg)`,
+              }}
+              animate={{
+                width: `calc(sqrt(pow(${60 - 30}, 2) + pow(${50 - 70}, 2)) * 100%)`,
+                opacity: [0, 0.5, 0],
+              }}
+              transition={{
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 3,
+                delay: 1.5,
+              }}
+            />
           </div>
         </div>
       )}

@@ -50,50 +50,82 @@ export function AnalyticsPlatform() {
       </div>
 
       <div className="flex border-b border-gray-800 mb-3 md:mb-6 overflow-x-auto pb-1 -mx-1 px-1">
-        {[
-          { id: "overview", label: "Overview", icon: BarChart3 },
-          { id: "performance", label: isVerySmall ? "Perf" : "Performance", icon: LineChart },
-          { id: "distribution", label: isVerySmall ? "Dist" : "Distribution", icon: PieChart },
-        ].map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-1 md:py-2 text-[10px] sm:text-xs md:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
-              activeTab === tab.id
-                ? "text-blue-400 border-blue-500"
-                : "text-gray-400 border-transparent hover:text-gray-300"
-            }`}
-          >
-            <tab.icon className="h-3 w-3 md:h-4 md:w-4" />
-            {tab.label}
-          </button>
-        ))}
+        <button
+          onClick={() => setActiveTab("overview")}
+          className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-1 md:py-2 text-[10px] sm:text-xs md:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
+            activeTab === "overview"
+              ? "text-blue-400 border-blue-500"
+              : "text-gray-400 border-transparent hover:text-gray-300"
+          }`}
+        >
+          <BarChart3 className="h-3 w-3 md:h-4 md:w-4" />
+          Overview
+        </button>
+        <button
+          onClick={() => setActiveTab("performance")}
+          className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-1 md:py-2 text-[10px] sm:text-xs md:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
+            activeTab === "performance"
+              ? "text-blue-400 border-blue-500"
+              : "text-gray-400 border-transparent hover:text-gray-300"
+          }`}
+        >
+          <LineChart className="h-3 w-3 md:h-4 md:w-4" />
+          {isVerySmall ? "Perf" : "Performance"}
+        </button>
+        <button
+          onClick={() => setActiveTab("distribution")}
+          className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-1 md:py-2 text-[10px] sm:text-xs md:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
+            activeTab === "distribution"
+              ? "text-blue-400 border-blue-500"
+              : "text-gray-400 border-transparent hover:text-gray-300"
+          }`}
+        >
+          <PieChart className="h-3 w-3 md:h-4 md:w-4" />
+          {isVerySmall ? "Dist" : "Distribution"}
+        </button>
       </div>
 
       <div className="grid grid-cols-2 gap-2 md:gap-4 mb-3 md:mb-6">
-        {[
-          { label: "Total Users", value: isVerySmall ? "24.5k" : "24,521", change: "+12%", isPositive: true },
-          { label: "Conv Rate", value: "12.3%", change: "+2%", isPositive: true },
-          { label: "Avg Session", value: isVerySmall ? "4m" : "4m 23s", change: "-3%", isPositive: false },
-          { label: "Bounce Rate", value: "32.4%", change: "-5%", isPositive: true },
-        ].map((stat, index) => (
-          <div key={index} className="bg-gray-800/50 p-2 md:p-3 rounded-lg">
-            <div className="text-[8px] sm:text-xs text-gray-400 mb-0.5 md:mb-1 truncate">{stat.label}</div>
-            <div className="flex justify-between items-end">
-              <div className="text-xs sm:text-sm md:text-lg font-bold">{stat.value}</div>
-              <div
-                className={`text-[8px] sm:text-xs flex items-center gap-0.5 md:gap-1 ${stat.isPositive ? "text-green-500" : "text-red-500"}`}
-              >
-                {stat.change}
-                {stat.isPositive ? (
-                  <ArrowUpRight className="h-2 w-2 md:h-3 md:w-3" />
-                ) : (
-                  <ArrowDownRight className="h-2 w-2 md:h-3 md:w-3" />
-                )}
-              </div>
+        <div className="bg-gray-800/50 p-2 md:p-3 rounded-lg">
+          <div className="text-[8px] sm:text-xs text-gray-400 mb-0.5 md:mb-1 truncate">Total Users</div>
+          <div className="flex justify-between items-end">
+            <div className="text-xs sm:text-sm md:text-lg font-bold">{isVerySmall ? "24.5k" : "24,521"}</div>
+            <div className="text-[8px] sm:text-xs flex items-center gap-0.5 md:gap-1 text-green-500">
+              +12%
+              <ArrowUpRight className="h-2 w-2 md:h-3 md:w-3" />
             </div>
           </div>
-        ))}
+        </div>
+        <div className="bg-gray-800/50 p-2 md:p-3 rounded-lg">
+          <div className="text-[8px] sm:text-xs text-gray-400 mb-0.5 md:mb-1 truncate">Conv Rate</div>
+          <div className="flex justify-between items-end">
+            <div className="text-xs sm:text-sm md:text-lg font-bold">12.3%</div>
+            <div className="text-[8px] sm:text-xs flex items-center gap-0.5 md:gap-1 text-green-500">
+              +2%
+              <ArrowUpRight className="h-2 w-2 md:h-3 md:w-3" />
+            </div>
+          </div>
+        </div>
+        <div className="bg-gray-800/50 p-2 md:p-3 rounded-lg">
+          <div className="text-[8px] sm:text-xs text-gray-400 mb-0.5 md:mb-1 truncate">Avg Session</div>
+          <div className="flex justify-between items-end">
+            <div className="text-xs sm:text-sm md:text-lg font-bold">{isVerySmall ? "4m" : "4m 23s"}</div>
+            <div className="text-[8px] sm:text-xs flex items-center gap-0.5 md:gap-1 text-red-500">
+              -3%
+              <ArrowDownRight className="h-2 w-2 md:h-3 md:w-3" />
+            </div>
+          </div>
+        </div>
+        <div className="bg-gray-800/50 p-2 md:p-3 rounded-lg">
+          <div className="text-[8px] sm:text-xs text-gray-400 mb-0.5 md:mb-1 truncate">Bounce Rate</div>
+          <div className="flex justify-between items-end">
+            <div className="text-xs sm:text-sm md:text-lg font-bold">32.4%</div>
+            <div className="text-[8px] sm:text-xs flex items-center gap-0.5 md:gap-1 text-green-500">
+              -5%
+              <ArrowUpRight className="h-2 w-2 md:h-3 md:w-3" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="bg-gray-800/50 p-2 md:p-4 rounded-lg mb-3 md:mb-6">
@@ -130,7 +162,7 @@ export function AnalyticsPlatform() {
               </motion.div>
               {!isVerySmall && (
                 <div className="text-[6px] md:text-[8px] text-gray-500 mt-0.5 md:mt-1">
-                  {["M", "T", "W", "T", "F", "S", "S"][index]}
+                  {index === 0 ? "M" : index === 1 ? "T" : index === 2 ? "W" : index === 3 ? "T" : index === 4 ? "F" : index === 5 ? "S" : "S"}
                 </div>
               )}
             </div>
@@ -145,27 +177,62 @@ export function AnalyticsPlatform() {
         </div>
 
         <div className="space-y-2 md:space-y-3">
-          {[
-            { source: "Direct", percentage: 42, color: "bg-blue-500" },
-            { source: isVerySmall ? "Search" : "Organic Search", percentage: 28, color: "bg-purple-500" },
-            { source: isVerySmall ? "Social" : "Social Media", percentage: 18, color: "bg-green-500" },
-            { source: "Referral", percentage: 12, color: "bg-yellow-500" },
-          ].map((item, index) => (
-            <div key={index} className="space-y-0.5 md:space-y-1">
-              <div className="flex justify-between text-[8px] md:text-xs">
-                <span>{item.source}</span>
-                <span>{item.percentage}%</span>
-              </div>
-              <div className="h-1 md:h-1.5 bg-gray-700 rounded-full overflow-hidden">
-                <motion.div
-                  className={`h-full ${item.color}`}
-                  initial={{ width: 0 }}
-                  animate={{ width: `${item.percentage}%` }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                />
-              </div>
+          <div className="space-y-0.5 md:space-y-1">
+            <div className="flex justify-between text-[8px] md:text-xs">
+              <span>Direct</span>
+              <span>42%</span>
             </div>
-          ))}
+            <div className="h-1 md:h-1.5 bg-gray-700 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-blue-500"
+                initial={{ width: 0 }}
+                animate={{ width: "42%" }}
+                transition={{ duration: 0.5, delay: 0 }}
+              />
+            </div>
+          </div>
+          <div className="space-y-0.5 md:space-y-1">
+            <div className="flex justify-between text-[8px] md:text-xs">
+              <span>{isVerySmall ? "Search" : "Organic Search"}</span>
+              <span>28%</span>
+            </div>
+            <div className="h-1 md:h-1.5 bg-gray-700 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-purple-500"
+                initial={{ width: 0 }}
+                animate={{ width: "28%" }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              />
+            </div>
+          </div>
+          <div className="space-y-0.5 md:space-y-1">
+            <div className="flex justify-between text-[8px] md:text-xs">
+              <span>{isVerySmall ? "Social" : "Social Media"}</span>
+              <span>18%</span>
+            </div>
+            <div className="h-1 md:h-1.5 bg-gray-700 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-green-500"
+                initial={{ width: 0 }}
+                animate={{ width: "18%" }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              />
+            </div>
+          </div>
+          <div className="space-y-0.5 md:space-y-1">
+            <div className="flex justify-between text-[8px] md:text-xs">
+              <span>Referral</span>
+              <span>12%</span>
+            </div>
+            <div className="h-1 md:h-1.5 bg-gray-700 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-yellow-500"
+                initial={{ width: 0 }}
+                animate={{ width: "12%" }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

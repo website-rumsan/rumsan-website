@@ -56,21 +56,54 @@ export default function LandingPage() {
             <span className="font-bold text-xl">TechNova</span>
           </motion.div>
           <nav className="hidden md:flex items-center gap-8">
-            {["Features", "Products", "About", "Testimonials"].map((item, i) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Link
+                href="#features"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
               >
-                <Link
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  {item}
-                </Link>
-              </motion.div>
-            ))}
+                Features
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Link
+                href="#products"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              >
+                Products
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Link
+                href="#about"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              >
+                About
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <Link
+                href="#testimonials"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              >
+                Testimonials
+              </Link>
+            </motion.div>
           </nav>
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -102,16 +135,34 @@ export default function LandingPage() {
             className="fixed top-[72px] left-0 right-0 z-40 bg-black border-b border-gray-800 md:hidden"
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-6">
-              {["Features", "Products", "About", "Testimonials"].map((item) => (
-                <Link
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </Link>
-              ))}
+              <Link
+                href="#features"
+                className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </Link>
+              <Link
+                href="#products"
+                className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Products
+              </Link>
+              <Link
+                href="#about"
+                className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="#testimonials"
+                className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Testimonials
+              </Link>
               <Button
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 w-full"
                 onClick={() => {
@@ -217,36 +268,70 @@ export default function LandingPage() {
 
                 {/* Stats Cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                  {[
-                    { label: "Total Users", value: "24,521", change: "+12%", color: "text-green-500" },
-                    { label: "Revenue", value: "$42,500", change: "+8%", color: "text-green-500" },
-                    { label: "Active Sessions", value: "1,293", change: "-3%", color: "text-red-500" },
-                    { label: "Conversion Rate", value: "12.3%", change: "+2%", color: "text-green-500" },
-                  ].map((stat, index) => (
-                    <div
-                      key={index}
-                      className="bg-gray-900 p-3 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors"
-                    >
-                      <div className="text-xs text-gray-400">{stat.label}</div>
-                      <div className="text-lg font-bold">{stat.value}</div>
-                      <div className={`text-xs ${stat.color} flex items-center gap-1`}>
-                        {stat.change}
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d={
-                              stat.change.startsWith("+")
-                                ? "M12 19V5M12 5L5 12M12 5L19 12"
-                                : "M12 5V19M12 19L19 12M12 19L5 12"
-                            }
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
+                  <div className="bg-gray-900 p-3 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                    <div className="text-xs text-gray-400">Total Users</div>
+                    <div className="text-lg font-bold">24,521</div>
+                    <div className="text-xs text-green-500 flex items-center gap-1">
+                      +12%
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 19V5M12 5L5 12M12 5L19 12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     </div>
-                  ))}
+                  </div>
+                  <div className="bg-gray-900 p-3 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                    <div className="text-xs text-gray-400">Revenue</div>
+                    <div className="text-lg font-bold">$42,500</div>
+                    <div className="text-xs text-green-500 flex items-center gap-1">
+                      +8%
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 19V5M12 5L5 12M12 5L19 12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-gray-900 p-3 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                    <div className="text-xs text-gray-400">Active Sessions</div>
+                    <div className="text-lg font-bold">1,293</div>
+                    <div className="text-xs text-red-500 flex items-center gap-1">
+                      -3%
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 5V19M12 19L19 12M12 19L5 12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-gray-900 p-3 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                    <div className="text-xs text-gray-400">Conversion Rate</div>
+                    <div className="text-lg font-bold">12.3%</div>
+                    <div className="text-xs text-green-500 flex items-center gap-1">
+                      +2%
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 19V5M12 5L5 12M12 5L19 12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Chart */}
@@ -266,21 +351,162 @@ export default function LandingPage() {
 
                     {/* Interactive Chart */}
                     <div className="h-[80px] md:h-[120px] flex items-end">
-                      {[35, 45, 30, 60, 75, 45, 55, 70, 60, 75, 85, 65].map((height, index) => (
-                        <div key={index} className="flex-1 flex flex-col items-center group">
-                          <div className="relative w-full">
-                            <div
-                              className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
-                              style={{ height: `${height}%` }}
-                            >
-                              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                                ${Math.floor(height * 120)}: {index + 1} Jan
-                              </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "35%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $4200: 1 Jan
                             </div>
                           </div>
-                          <div className="text-[8px] text-gray-500 mt-1">{index + 1}</div>
                         </div>
-                      ))}
+                        <div className="text-[8px] text-gray-500 mt-1">1</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "45%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $5400: 2 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">2</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "30%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $3600: 3 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">3</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "60%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $7200: 4 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">4</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "75%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $9000: 5 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">5</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "45%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $5400: 6 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">6</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "55%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $6600: 7 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">7</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "70%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $8400: 8 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">8</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "60%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $7200: 9 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">9</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "75%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $9000: 10 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">10</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "85%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $10200: 11 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">11</div>
+                      </div>
+                      <div className="flex-1 flex flex-col items-center group">
+                        <div className="relative w-full">
+                          <div
+                            className="w-full bg-purple-500/20 hover:bg-purple-500/30 transition-colors rounded-sm cursor-pointer"
+                            style={{ height: "65%" }}
+                          >
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                              $7800: 12 Jan
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-[8px] text-gray-500 mt-1">12</div>
+                      </div>
                     </div>
                   </div>
 
@@ -302,47 +528,39 @@ export default function LandingPage() {
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-800">
-                          {[
-                            {
-                              id: "#TRX-5632",
-                              customer: "John Smith",
-                              amount: "$125.00",
-                              status: "Completed",
-                              date: "Today, 2:30 PM",
-                            },
-                            {
-                              id: "#TRX-5631",
-                              customer: "Alice Johnson",
-                              amount: "$250.00",
-                              status: "Pending",
-                              date: "Today, 11:15 AM",
-                            },
-                            {
-                              id: "#TRX-5630",
-                              customer: "Robert Brown",
-                              amount: "$350.00",
-                              status: "Completed",
-                              date: "Yesterday, 3:45 PM",
-                            },
-                          ].map((transaction, index) => (
-                            <tr key={index} className="hover:bg-gray-800/50 cursor-pointer">
-                              <td className="px-4 py-2 text-xs">{transaction.id}</td>
-                              <td className="px-4 py-2 text-xs">{transaction.customer}</td>
-                              <td className="px-4 py-2 text-xs">{transaction.amount}</td>
-                              <td className="px-4 py-2 text-xs">
-                                <span
-                                  className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                                    transaction.status === "Completed"
-                                      ? "bg-green-900/30 text-green-400"
-                                      : "bg-yellow-900/30 text-yellow-400"
-                                  }`}
-                                >
-                                  {transaction.status}
-                                </span>
-                              </td>
-                              <td className="px-4 py-2 text-xs text-gray-400">{transaction.date}</td>
-                            </tr>
-                          ))}
+                          <tr className="hover:bg-gray-800/50 cursor-pointer">
+                            <td className="px-4 py-2 text-xs">#TRX-5632</td>
+                            <td className="px-4 py-2 text-xs">John Smith</td>
+                            <td className="px-4 py-2 text-xs">$125.00</td>
+                            <td className="px-4 py-2 text-xs">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-900/30 text-green-400">
+                                Completed
+                              </span>
+                            </td>
+                            <td className="px-4 py-2 text-xs text-gray-400">Today, 2:30 PM</td>
+                          </tr>
+                          <tr className="hover:bg-gray-800/50 cursor-pointer">
+                            <td className="px-4 py-2 text-xs">#TRX-5631</td>
+                            <td className="px-4 py-2 text-xs">Alice Johnson</td>
+                            <td className="px-4 py-2 text-xs">$250.00</td>
+                            <td className="px-4 py-2 text-xs">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-900/30 text-yellow-400">
+                                Pending
+                              </span>
+                            </td>
+                            <td className="px-4 py-2 text-xs text-gray-400">Today, 11:15 AM</td>
+                          </tr>
+                          <tr className="hover:bg-gray-800/50 cursor-pointer">
+                            <td className="px-4 py-2 text-xs">#TRX-5630</td>
+                            <td className="px-4 py-2 text-xs">Robert Brown</td>
+                            <td className="px-4 py-2 text-xs">$350.00</td>
+                            <td className="px-4 py-2 text-xs">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-900/30 text-green-400">
+                                Completed
+                              </span>
+                            </td>
+                            <td className="px-4 py-2 text-xs text-gray-400">Yesterday, 3:45 PM</td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -375,60 +593,114 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Code className="h-10 w-10 text-purple-500" />,
-                title: "Advanced API",
-                description:
-                  "Integrate seamlessly with our robust API designed for developers with comprehensive documentation and examples.",
-              },
-              {
-                icon: <Globe className="h-10 w-10 text-blue-500" />,
-                title: "Global CDN",
-                description:
-                  "Lightning-fast content delivery across our worldwide network with 99.9% uptime guarantee.",
-              },
-              {
-                icon: <CheckCircle className="h-10 w-10 text-green-500" />,
-                title: "Reliable Security",
-                description:
-                  "Enterprise-grade security with end-to-end encryption and compliance with industry standards.",
-              },
-              {
-                icon: <Cpu className="h-10 w-10 text-red-500" />,
-                title: "AI-Powered",
-                description:
-                  "Leverage the power of artificial intelligence to optimize your workflow and gain valuable insights.",
-              },
-              {
-                icon: <MessageSquare className="h-10 w-10 text-yellow-500" />,
-                title: "24/7 Support",
-                description:
-                  "Our dedicated team is always available to assist you with any issues through multiple channels.",
-              },
-              {
-                icon: <Github className="h-10 w-10 text-gray-400" />,
-                title: "Open Source",
-                description:
-                  "Contribute to our growing ecosystem of open-source tools and libraries with active community support.",
-              },
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
-                  <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
-                    <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">{feature.icon}</div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-gray-400">{feature.description}</p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
+                  <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">
+                    <Code className="h-10 w-10 text-purple-500" />
                   </div>
+                  <h3 className="text-xl font-bold mb-2">Advanced API</h3>
+                  <p className="text-gray-400">
+                    Integrate seamlessly with our robust API designed for developers with comprehensive documentation and examples.
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
+                  <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">
+                    <Globe className="h-10 w-10 text-blue-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Global CDN</h3>
+                  <p className="text-gray-400">
+                    Lightning-fast content delivery across our worldwide network with 99.9% uptime guarantee.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
+                  <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">
+                    <CheckCircle className="h-10 w-10 text-green-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Reliable Security</h3>
+                  <p className="text-gray-400">
+                    Enterprise-grade security with end-to-end encryption and compliance with industry standards.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
+                  <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">
+                    <Cpu className="h-10 w-10 text-red-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">AI-Powered</h3>
+                  <p className="text-gray-400">
+                    Leverage the power of artificial intelligence to optimize your workflow and gain valuable insights.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
+                  <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">
+                    <MessageSquare className="h-10 w-10 text-yellow-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
+                  <p className="text-gray-400">
+                    Our dedicated team is always available to assist you with any issues through multiple channels.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-6 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-colors backdrop-blur-sm">
+                  <div className="mb-4 p-3 bg-gray-800/30 rounded-lg inline-block">
+                    <Github className="h-10 w-10 text-gray-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Open Source</h3>
+                  <p className="text-gray-400">
+                    Contribute to our growing ecosystem of open-source tools and libraries with active community support.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -468,14 +740,22 @@ export default function LandingPage() {
                   resources efficiently.
                 </p>
                 <ul className="space-y-3">
-                  {["Auto-scaling", "Global distribution", "Pay-as-you-go pricing", "99.9% uptime SLA"].map(
-                    (feature, i) => (
-                      <li key={i} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-purple-500" />
-                        <span>{feature}</span>
-                      </li>
-                    ),
-                  )}
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-500" />
+                    <span>Auto-scaling</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-500" />
+                    <span>Global distribution</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-500" />
+                    <span>Pay-as-you-go pricing</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-purple-500" />
+                    <span>99.9% uptime SLA</span>
+                  </li>
                 </ul>
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
                   Learn More
@@ -511,14 +791,22 @@ export default function LandingPage() {
                   with confidence.
                 </p>
                 <ul className="space-y-2 md:space-y-3">
-                  {["Real-time dashboards", "Custom reports", "AI-powered predictions", "Data visualization"].map(
-                    (feature, i) => (
-                      <li key={i} className="flex items-center gap-2 md:gap-3">
-                        <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
-                        <span className="text-sm md:text-base">{feature}</span>
-                      </li>
-                    ),
-                  )}
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">Real-time dashboards</span>
+                  </li>
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">Custom reports</span>
+                  </li>
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">AI-powered predictions</span>
+                  </li>
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">Data visualization</span>
+                  </li>
                 </ul>
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
                   Learn More
@@ -555,17 +843,22 @@ export default function LandingPage() {
                   advanced protection.
                 </p>
                 <ul className="space-y-2 md:space-y-3">
-                  {[
-                    "Threat detection",
-                    "Vulnerability scanning",
-                    "Compliance monitoring",
-                    "24/7 security operations",
-                  ].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 md:gap-3">
-                      <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
-                      <span className="text-sm md:text-base">{feature}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">Threat detection</span>
+                  </li>
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">Vulnerability scanning</span>
+                  </li>
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">Compliance monitoring</span>
+                  </li>
+                  <li className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-purple-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base">24/7 security operations</span>
+                  </li>
                 </ul>
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
                   Learn More
@@ -673,57 +966,90 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sarah Johnson",
-                role: "CTO, TechStart Inc.",
-                image: "https://avatar.vercel.sh/jill",
-                content:
-                  "TechNova has completely transformed our development workflow. The platform's intuitive design and powerful features have increased our team's productivity by over 40%.",
-              },
-              {
-                name: "Michael Chen",
-                role: "Founder, DataFlow",
-                image: "https://avatar.vercel.sh/jill",
-                content:
-                  "Implementing TechNova was one of the best decisions we've made. The seamless integration and robust API have allowed us to focus on what matters most - building great products.",
-              },
-              {
-                name: "Emily Rodriguez",
-                role: "Lead Developer, InnovateCorp",
-                image: "https://avatar.vercel.sh/jill",
-                content:
-                  "As a developer, I appreciate the attention to detail in TechNova's platform. The documentation is comprehensive, and the support team is always ready to help.",
-              },
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
-                  <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-xl border border-gray-800/50 backdrop-blur-sm">
-                    <div className="flex items-center mb-6">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                        <Image
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h4 className="font-bold">{testimonial.name}</h4>
-                        <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                      </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-xl border border-gray-800/50 backdrop-blur-sm">
+                  <div className="flex items-center mb-6">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                      <Image
+                        src="https://avatar.vercel.sh/jill"
+                        alt="Sarah Johnson"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                    <div>
+                      <h4 className="font-bold">Sarah Johnson</h4>
+                      <p className="text-gray-400 text-sm">CTO, TechStart Inc.</p>
+                    </div>
                   </div>
+                  <p className="text-gray-300 italic">
+                    "TechNova has completely transformed our development workflow. The platform's intuitive design and powerful features have increased our team's productivity by over 40%."
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-xl border border-gray-800/50 backdrop-blur-sm">
+                  <div className="flex items-center mb-6">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                      <Image
+                        src="https://avatar.vercel.sh/jill"
+                        alt="Michael Chen"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Michael Chen</h4>
+                      <p className="text-gray-400 text-sm">Founder, DataFlow</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 italic">
+                    "Implementing TechNova was one of the best decisions we've made. The seamless integration and robust API have allowed us to focus on what matters most - building great products."
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-[1px] rounded-xl">
+                <div className="h-full bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-xl border border-gray-800/50 backdrop-blur-sm">
+                  <div className="flex items-center mb-6">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                      <Image
+                        src="https://avatar.vercel.sh/jill"
+                        alt="Emily Rodriguez"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Emily Rodriguez</h4>
+                      <p className="text-gray-400 text-sm">Lead Developer, InnovateCorp</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 italic">
+                    "As a developer, I appreciate the attention to detail in TechNova's platform. The documentation is comprehensive, and the support team is always ready to help."
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -841,39 +1167,93 @@ export default function LandingPage() {
             <div>
               <h4 className="font-bold text-lg mb-6">Products</h4>
               <ul className="space-y-4">
-                {["Cloud Platform", "Analytics", "Security", "API", "Documentation"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Cloud Platform
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Analytics
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Security
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    API
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Documentation
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-lg mb-6">Company</h4>
               <ul className="space-y-4">
-                {["About", "Careers", "Blog", "Press", "Partners"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Partners
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-lg mb-6">Legal</h4>
               <ul className="space-y-4">
-                {["Terms", "Privacy", "Cookies", "Licenses", "Contact"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Terms
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Cookies
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Licenses
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

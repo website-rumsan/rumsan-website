@@ -11,55 +11,37 @@ export function TeamVisualization() {
   const isMobile = useMediaQuery("(max-width: 768px)")
   const isVerySmall = useMediaQuery("(max-width: 500px)")
 
-  // Define team data
-  const teams = [
-    {
-      id: "engineering",
-      name: isVerySmall ? "Eng" : "Engineering",
-      icon: Code,
-      color: "text-blue-500",
-      count: isVerySmall ? 6 : isMobile ? 8 : 24,
-    },
-    {
-      id: "design",
-      name: "Design",
-      icon: Palette,
-      color: "text-purple-500",
-      count: isVerySmall ? 4 : isMobile ? 6 : 12,
-    },
-    {
-      id: "product",
-      name: isVerySmall ? "Prod" : "Product",
-      icon: Briefcase,
-      color: "text-green-500",
-      count: isVerySmall ? 3 : isMobile ? 4 : 8,
-    },
-    {
-      id: "support",
-      name: isVerySmall ? "Supp" : "Support",
-      icon: MessageSquare,
-      color: "text-yellow-500",
-      count: isVerySmall ? 4 : isMobile ? 6 : 16,
-    },
-  ]
-
   // Generate team members when active team changes
   useEffect(() => {
     if (!activeTeam) return
 
-    const team = teams.find((t) => t.id === activeTeam)
-    if (!team) return
+    let teamCount = 0;
+    let teamName = "";
+    
+    if (activeTeam === "engineering") {
+      teamCount = isVerySmall ? 6 : isMobile ? 8 : 24;
+      teamName = "engineering";
+    } else if (activeTeam === "design") {
+      teamCount = isVerySmall ? 4 : isMobile ? 6 : 12;
+      teamName = "design";
+    } else if (activeTeam === "product") {
+      teamCount = isVerySmall ? 3 : isMobile ? 4 : 8;
+      teamName = "product";
+    } else if (activeTeam === "support") {
+      teamCount = isVerySmall ? 4 : isMobile ? 6 : 16;
+      teamName = "support";
+    }
 
     // Generate random team members
-    const members = Array.from({ length: team.count }, (_, i) => ({
+    const members = Array.from({ length: teamCount }, (_, i) => ({
       id: i,
       name: `Team Member ${i + 1}`,
       role:
-        team.id === "engineering"
+        teamName === "engineering"
           ? ["Frontend", "Backend", "DevOps", "QA"][i % 4]
-          : team.id === "design"
+          : teamName === "design"
             ? ["UI", "UX", "Visual", "Motion"][i % 4]
-            : team.id === "product"
+            : teamName === "product"
               ? ["Manager", "Owner", "Analyst", "Strategist"][i % 4]
               : ["L1", "L2", "L3", "Manager"][i % 4],
       x: Math.random() * 80 + 10, // 10-90%
@@ -80,32 +62,77 @@ export function TeamVisualization() {
       </div>
 
       <div className="flex gap-1 sm:gap-2 md:gap-3 mb-3 md:mb-6 overflow-x-auto pb-2 -mx-1 px-1">
-        {teams.map((team) => (
-          <button
-            key={team.id}
-            onClick={() => setActiveTeam(team.id)}
-            className={`flex items-center gap-1 md:gap-2 px-1.5 sm:px-2 md:px-3 py-1 md:py-2 rounded-lg transition-colors whitespace-nowrap text-[8px] sm:text-xs md:text-sm ${
-              activeTeam === team.id
-                ? `bg-gray-800 ${team.color}`
-                : "bg-gray-800/30 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300"
-            }`}
-          >
-            <team.icon className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4" />
-            <span>{team.name}</span>
-            <span className="text-[6px] sm:text-[10px] md:text-xs bg-gray-700/50 px-1 md:px-1.5 py-0.5 rounded-full">
-              {team.count}
-            </span>
-          </button>
-        ))}
+        <button
+          onClick={() => setActiveTeam("engineering")}
+          className={`flex items-center gap-1 md:gap-2 px-1.5 sm:px-2 md:px-3 py-1 md:py-2 rounded-lg transition-colors whitespace-nowrap text-[8px] sm:text-xs md:text-sm ${
+            activeTeam === "engineering"
+              ? "bg-gray-800 text-blue-500"
+              : "bg-gray-800/30 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300"
+          }`}
+        >
+          <Code className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4" />
+          <span>{isVerySmall ? "Eng" : "Engineering"}</span>
+          <span className="text-[6px] sm:text-[10px] md:text-xs bg-gray-700/50 px-1 md:px-1.5 py-0.5 rounded-full">
+            {isVerySmall ? 6 : isMobile ? 8 : 24}
+          </span>
+        </button>
+        <button
+          onClick={() => setActiveTeam("design")}
+          className={`flex items-center gap-1 md:gap-2 px-1.5 sm:px-2 md:px-3 py-1 md:py-2 rounded-lg transition-colors whitespace-nowrap text-[8px] sm:text-xs md:text-sm ${
+            activeTeam === "design"
+              ? "bg-gray-800 text-purple-500"
+              : "bg-gray-800/30 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300"
+          }`}
+        >
+          <Palette className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4" />
+          <span>Design</span>
+          <span className="text-[6px] sm:text-[10px] md:text-xs bg-gray-700/50 px-1 md:px-1.5 py-0.5 rounded-full">
+            {isVerySmall ? 4 : isMobile ? 6 : 12}
+          </span>
+        </button>
+        <button
+          onClick={() => setActiveTeam("product")}
+          className={`flex items-center gap-1 md:gap-2 px-1.5 sm:px-2 md:px-3 py-1 md:py-2 rounded-lg transition-colors whitespace-nowrap text-[8px] sm:text-xs md:text-sm ${
+            activeTeam === "product"
+              ? "bg-gray-800 text-green-500"
+              : "bg-gray-800/30 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300"
+          }`}
+        >
+          <Briefcase className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4" />
+          <span>{isVerySmall ? "Prod" : "Product"}</span>
+          <span className="text-[6px] sm:text-[10px] md:text-xs bg-gray-700/50 px-1 md:px-1.5 py-0.5 rounded-full">
+            {isVerySmall ? 3 : isMobile ? 4 : 8}
+          </span>
+        </button>
+        <button
+          onClick={() => setActiveTeam("support")}
+          className={`flex items-center gap-1 md:gap-2 px-1.5 sm:px-2 md:px-3 py-1 md:py-2 rounded-lg transition-colors whitespace-nowrap text-[8px] sm:text-xs md:text-sm ${
+            activeTeam === "support"
+              ? "bg-gray-800 text-yellow-500"
+              : "bg-gray-800/30 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300"
+          }`}
+        >
+          <MessageSquare className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4" />
+          <span>{isVerySmall ? "Supp" : "Support"}</span>
+          <span className="text-[6px] sm:text-[10px] md:text-xs bg-gray-700/50 px-1 md:px-1.5 py-0.5 rounded-full">
+            {isVerySmall ? 4 : isMobile ? 6 : 16}
+          </span>
+        </button>
       </div>
 
       <div className="bg-gray-800/30 rounded-lg p-2 sm:p-3 md:p-4 mb-3 md:mb-6">
         <div className="flex justify-between items-center mb-1.5 sm:mb-2 md:mb-3">
           <h4 className="text-[10px] sm:text-xs md:text-sm font-medium">
-            {activeTeam ? teams.find((t) => t.id === activeTeam)?.name : "All"} Team
+            {activeTeam === "engineering" ? (isVerySmall ? "Eng" : "Engineering") : 
+             activeTeam === "design" ? "Design" : 
+             activeTeam === "product" ? (isVerySmall ? "Prod" : "Product") : 
+             activeTeam === "support" ? (isVerySmall ? "Supp" : "Support") : "All"} Team
           </h4>
           <span className="text-[8px] sm:text-[10px] md:text-xs text-gray-400">
-            {activeTeam ? teams.find((t) => t.id === activeTeam)?.count : 0} {isVerySmall ? "" : "members"}
+            {activeTeam === "engineering" ? (isVerySmall ? 6 : isMobile ? 8 : 24) : 
+             activeTeam === "design" ? (isVerySmall ? 4 : isMobile ? 6 : 12) : 
+             activeTeam === "product" ? (isVerySmall ? 3 : isMobile ? 4 : 8) : 
+             activeTeam === "support" ? (isVerySmall ? 4 : isMobile ? 6 : 16) : 0} {isVerySmall ? "" : "members"}
           </span>
         </div>
 

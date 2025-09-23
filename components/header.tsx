@@ -58,7 +58,7 @@ export default function Header() {
           >
             <Link href="/">
               <img
-                src="https://assets.rumsan.net/rahat/rumsan-logo.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/rumsan-logo-JYt2thESomnzMurQgieZEX42n8NKc2.png"
                 alt="Rumsan Logo"
                 className="h-16 w-auto"
               />

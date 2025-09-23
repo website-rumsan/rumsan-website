@@ -53,7 +53,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/hlb.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/hlb-wpKwQTQRPlMXrb51zwaG4hWO39CR6v.jpg"
                     alt="Hamro LifeBank"
                     className="w-full h-full object-cover"
                   />
@@ -101,7 +101,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-artswap-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-artswap-banner-CC9Sv6pBx2AlMxIEMzSD9rLa2B1F88.jpg"
                     alt="Artswap"
                     className="w-full h-full object-cover"
                   />
@@ -150,7 +150,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-the-record-banner-.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-the-record-banner--pumijhcq0p4NfCh1hxRuEhXwzaTbvv.jpg"
                     alt="The Record"
                     className="w-full h-full object-cover"
                   />
@@ -198,7 +198,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-care-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-care-banner-UJZkRfT7J4THtkoi48zv79uhuBjtOl.jpg"
                     alt="Care Nepal"
                     className="w-full h-full object-cover"
                   />
@@ -246,7 +246,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-rahat-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-rahat-banner-e34OP6jNu4e1FGES7zMBWTmHonM6Ok.jpg"
                     alt="Rahat"
                     className="w-full h-full object-cover"
                   />
@@ -294,7 +294,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-heifer-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-heifer-banner-bqvRhzlIDk3q4mUCHtRYyOONHyfsWi.jpg"
                     alt="Heifer"
                     className="w-full h-full object-cover"
                   />
@@ -342,7 +342,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-bring-it-on-sports-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-bring-it-on-sports-banner-bsEpEP0CNcfy0PueJ7BNHCnTlr8SUK.jpg"
                     alt="Bring it on Sports"
                     className="w-full h-full object-cover"
                   />
@@ -390,7 +390,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-kyc-nepal-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-kyc-nepal-banner-ez8afjrXbd3lgkytkJpNRkG7d3pj5W.jpg"
                     alt="KYC Nepal"
                     className="w-full h-full object-cover"
                   />
@@ -438,7 +438,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/portfolio-agriclear-banner.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/portfolio-agriclear-banner-HzS3fdDlvHYXn2GC2LmgtjV41kfzx9.jpg"
                     alt="AgriClear"
                     className="w-full h-full object-cover"
                   />
@@ -485,7 +485,7 @@ export default function PortfolioPage() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-full">
                   <img
-                    src="https://assets.rumsan.net/rahat/waya-energy-cover.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/waya-energy-cover-ogncvV0qhAQBsJhJktelUZj1NMTuof.jpg"
                     alt="Waya Energy"
                     className="w-full h-full object-cover"
                   />

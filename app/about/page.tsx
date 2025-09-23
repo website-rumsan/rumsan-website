@@ -267,7 +267,7 @@ export default function AboutPage() {
 
                 <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-2 shadow-2xl">
                   <img
-                    src="https://assets.rumsan.net/rahat/m1qcktwlld7659virbq.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/m1qcktwlld7659virbq-C1j1Xc88iFXMIu3PpQ9i3Q2MSJxRZa.jpg"
                     alt="Team collaboration"
                     className="w-full h-98 object-cover rounded-2xl"
                   />
@@ -615,7 +615,7 @@ export default function AboutPage() {
               <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border h-full flex flex-col">
                 <div className="mb-6 h-20 flex items-center justify-center">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/rahat-logo-standard.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/rahat-logo-standard-uZF5JWGaIoPZDvWo3wgagcpZEfQEVq.png"
                     alt="Rahat logo"
                     className="h-11 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                   />
@@ -651,7 +651,7 @@ export default function AboutPage() {
               <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border h-full flex flex-col">
                 <div className="mb-6 h-20 flex items-center justify-center">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/esatya-main-banner-01.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/esatya-main-banner-01-St6iGApmDYq8l4Zn3Smv2lXO0Wy1Hr.png"
                     alt="eSatya logo"
                     className="h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                   />
@@ -687,7 +687,7 @@ export default function AboutPage() {
               <div className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border h-full flex flex-col">
                 <div className="mb-6 h-20 flex items-center justify-center">
                   <img
-                    src="https://assets.rumsan.net/rumsan-group/hlb-blk-rumsan.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/hlb-blk-rumsan-Qve0e3RSsnjXf29uvVm3aRmoIlZ6tO.png"
                     alt="Hamro LifeBank logo"
                     className="max-h-full w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                   />

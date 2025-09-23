@@ -117,7 +117,7 @@ export default function RumsanLanding() {
                       className="inline-flex items-center gap-2"
                     >
                       <img
-                        src="https://assets.rumsan.net/rumsan-group/rumsan-logo-homepage.png"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/rumsan-logo-homepage-Bu1zUvMuwLU0c24H6KSstBvfL3GhsN.png"
                         alt="Rumsan logo"
                         className="h-28 w-auto"
                       />
@@ -148,7 +148,7 @@ export default function RumsanLanding() {
                       className="inline-flex items-center gap-2"
                     >
                       <img
-                        src="https://assets.rumsan.net/rumsan-group/rahat-logo-standard.png"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/rahat-logo-standard-uZF5JWGaIoPZDvWo3wgagcpZEfQEVq.png"
                         alt="Rahat logo"
                         className="h-12 w-auto"
                       />
@@ -179,7 +179,7 @@ export default function RumsanLanding() {
                       className="inline-flex items-center gap-2"
                     >
                       <img
-                        src="https://assets.rumsan.net/rumsan-group/esatya-main-banner-01.png"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/esatya-main-banner-01-St6iGApmDYq8l4Zn3Smv2lXO0Wy1Hr.png"
                         alt="eSatya logo"
                         className="h-24 w-auto"
                       />
@@ -210,7 +210,7 @@ export default function RumsanLanding() {
                       className="inline-flex items-center gap-2"
                     >
                       <img
-                        src="https://assets.rumsan.net/rumsan-group/hlb-blk-rumsan.png"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/hlb-blk-rumsan-Qve0e3RSsnjXf29uvVm3aRmoIlZ6tO.png"
                         alt="Hamro LifeBank logo"
                         className=" w-auto h-28"
                       />
@@ -370,7 +370,7 @@ export default function RumsanLanding() {
             >
               <div className="w-full max-w-xl">
                 <motion.img
-                  src="https://assets.rumsan.net/rumsan-group/about-us-image.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/about-us-image-jf2Rf2qUJvnNzJdTsao6LLBfc4TVFW.jpg"
                   alt="About Rumsan"
                   className=" h-80 md:h-[26rem] object-cover rounded-2xl shadow-2xl border border-white/20"
                   initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -380,7 +380,7 @@ export default function RumsanLanding() {
                   whileHover={{ scale: 1.02, rotate: 1 }}
                 />
                 <motion.img
-                  src="https://assets.rumsan.net/rumsan-group/about-us-3.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/about-us-3-YPEar0lWkDhRdzEM0B0IWgmVHNhquY.jpg"
                   alt="About Rumsan secondary"
                   className="mt-6 ml-14  h-50 sm:h-48 object-cover rounded-xl shadow-xl border border-white/20"
                   initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -752,7 +752,7 @@ export default function RumsanLanding() {
                   <div className="relative mb-6">
                     <div className="flex items-center justify-center h-24">
                       <img
-                        src="https://assets.rumsan.net/rahat/united-nations-childrens-fund-unicef-logo.png"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/united-nations-childrens-fund-unicef-logo-68p4hqRw0z1rsk9BY71AyztPSqCF4w.png"
                         alt="Unicef Nepal"
                         className="max-h-16 max-w-full object-contain filter group-hover:brightness-110 transition-all duration-300"
                       />
@@ -797,7 +797,7 @@ export default function RumsanLanding() {
                   <div className="relative mb-6">
                     <div className="flex items-center justify-center h-24">
                       <img
-                        src="https://assets.rumsan.net/rumsan-group/mit-solve-logo-home-page.png"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/mit-solve-logo-home-page-RklHcUJsjCdKxuXZLh6fime00eKaQS.png"
                         alt="MIT Solve"
                         className="max-h-28 max-w-full object-contain filter group-hover:brightness-110 transition-all duration-300"
                       />
@@ -842,7 +842,7 @@ export default function RumsanLanding() {
                   <div className="relative mb-6">
                     <div className="flex items-center justify-center h-24">
                       <img
-                        src="https://assets.rumsan.net/rahat/seal-sq-logo-partenairegsma-1.webp"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/seal-sq-logo-partenairegsma-1-jOq82D9qDKHOF3a2hZ41UhrTQORBvm.webp"
                         alt="GSMA"
                         className="max-h-28 max-w-full object-contain filter group-hover:brightness-110 transition-all duration-300"
                       />

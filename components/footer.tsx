@@ -45,14 +45,14 @@ export default function Footer() {
             <div className="flex gap-4 mb-6">
               <a href="https://rahat.io/" target="_blank" rel="noreferrer">
                 <img
-                  src="https://assets.rumsan.net/rumsan-group/rumsan-footer-rahat.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/rumsan-footer-rahat-nyc9YTh57i7bPHuytZM2FG2E3HW5jp.png"
                   alt="rahat logo"
                   className="w-16 h-auto hover:opacity-80 transition-opacity"
                 />
               </a>
               <a href="https://esatya.io/" target="_blank" rel="noreferrer">
                 <img
-                  src="https://assets.rumsan.net/rumsan-group/vertical-esatya-footer-white-colorful-rumsan.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/vertical-esatya-footer-white-colorful-rumsan-4XHFnbxv3A7AVWFsQeTdHyZUTJfZBK.png"
                   alt="esatya logo"
                   className="w-16 h-auto hover:opacity-80 transition-opacity"
                 />
@@ -63,7 +63,7 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <img
-                  src="https://assets.rumsan.net/rumsan-group/hlb-blk-rumsan.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/hlb-blk-rumsan-Qve0e3RSsnjXf29uvVm3aRmoIlZ6tO.png"
                   alt="hamro lifebank logo"
                   className="w-24 h-auto hover:opacity-80 transition-opacity"
                 />
@@ -165,21 +165,21 @@ export default function Footer() {
               style={{ display: "flex", gap: "20px" }}
             >
               <img
-                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-01.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/sdc-compliances-rahat-01-9b4OQ0HWtiu2CA6GZcxGbOX0N0Y8s1.jpg"
                 alt="sdc-compliances-1.jpg"
                 style={{ width: "100px" }}
                 className="mt-2"
               />
 
               <img
-                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-05.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/sdc-compliances-rahat-05-S3TR9YewwInd9G6XPYD8iN71YNfKJV.jpg"
                 alt="sdc-compliances-5.jpg"
                 style={{ width: "100px" }}
                 className="mt-2"
               />
 
               <img
-                src="https://assets.rumsan.net/rumsan-group/sdg-9-rahat.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/sdg-9-rahat-Sz9woiK5R2yqaNVnnRwbXh7E6PF2Jv.jpg"
                 alt="sdc-compliances-9.jpg"
                 style={{ width: "100px" }}
                 className="mt-2"

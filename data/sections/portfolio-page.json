@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Hamro LifeBank",
+    "description": "A smart, transparent and holistic blood management service revolutionizing how blood donation and distribution works in Nepal.",
+    "image": "https://assets.rumsan.net/rumsan-group/hlb.jpg",
+    "subdescription": "Hamro LifeBank is a social initiative for a smart, transparent and holistic blood management service from collection to supply. HLB is taking a data-centric approach to cut the stress out of the process by getting information to patients easily, motivating youth to donate blood and helping blood banks work efficiently to minimize wastage and make informed-decisions.",
+    "imagetitle": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/blood-donation-program-2.png",
+    "challenges": "Existing blood management system in Nepal is manual, cumbersome and inefficient. Almost all blood banks in the country record information on blood manually in registers which means there's a tedious process of back-office paperwork for blood banks and inefficiencies when it comes to handling emergencies, connecting to donors and sharing information in general. Tracking blood availability, usage and wastage is a cumbersome process.",
+    "solutions": "<ul><li style='margin-left:20px; list-style: disc;'>Develop a cohesive smart blood management ecosystem for Nepal.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Implements an efficient and transparent nation-wide donor data collection and bloodstock inventory to minimize wastage.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Builds PR for blood with smart blood donation events and aware people about the blood importance.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Ragat chahiyo blood hotline to manage blood and cut off the stress of patient family.</li></ul>",
+    "image1": "https://assets.rumsan.net/rumsan-group/hlb-banner-portfolio-2.jpg",
+    "image2": "https://assets.rumsan.net/rumsan-group/hlb-banner-portfolio.jpg",
+    "technology": [
+      "Database : MongoDB",
+      "UI : HTML/CSS/React",
+      "Programming Language : JavaScript",
+      "Server : NodeJS"
+    ],
+    "slug": "hamro-lifebank"
+  },
+  {
+    "id": 2,
+    "title": "Artswap",
+    "description": "A marketplace platform empowering collaboration between galleries, artists and collectors with improved personal interactions.",
+    "image": "https://assets.rumsan.net/rumsan-group/portfolio-artswap-banner.jpg",
+    "subdescription": "ArtSwap is led by tech founders, artists and lawyers coming together because of their deep love for the art community. The main goal of ArtSwap is launching the platform and a marketplace to empower true collaboration between galleries, artists and collectors with the result of improving personal interactions between all participants.",
+    "imagetitle": "https://assets.rumsan.net/rumsan-group/portfolio-artswap-banner.jpg",
+    "challenges": "The art community lacks a unified platform for collaboration between galleries, artists, and collectors. Traditional art markets are often fragmented, with limited transparency and poor communication between stakeholders.",
+    "solutions": "<ul><li style='margin-left:20px; list-style: disc;'>Create a unified marketplace connecting all art community stakeholders.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Implement NFT technology for authenticity and ownership verification.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Build tools for artists to showcase and sell their work directly.</li></ul>",
+    "image1": "https://assets.rumsan.net/rumsan-group/portfolio-artswap-banner.jpg",
+    "image2": "",
+    "technology": [
+      "Database : MongoDB",
+      "UI : React.js",
+      "Smart Contracts : Solidity",
+      "Blockchain : Polygon",
+      "Storage : IPFS"
+    ],
+    "slug": "artswap"
+  },
+  {
+    "id": 3,
+    "title": "The Record",
+    "description": "An independent digital publication examining politics, economy, society and culture with depth and analysis.",
+    "image": "https://assets.rumsan.net/rumsan-group/portfolio-the-record-banner-.jpg",
+    "subdescription": "Record Nepal is an independent digital publication based in Kathmandu, Nepal. They examine politics, the economy, societal, and culture stories. They look into events both current and past, offering depth, analysis, and perspective.",
+    "imagetitle": "https://assets.rumsan.net/rumsan-group/portfolio-the-record-banner-.jpg",
+    "challenges": "Nepal's media landscape lacked independent, in-depth analysis of political, economic, and social issues. Traditional media often lacks the digital infrastructure to reach younger audiences effectively.",
+    "solutions": "<ul><li style='margin-left:20px; list-style: disc;'>Develop a modern digital publication platform.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Create mobile-first reading experience for younger demographics.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Implement content management system for editorial workflow.</li></ul>",
+    "image1": "https://assets.rumsan.net/rumsan-group/portfolio-the-record-banner-.jpg",
+    "image2": "",
+    "technology": [
+      "Database : MongoDB",
+      "Mobile : React Native",
+      "Backend : NodeJS",
+      "Styling : Bootstrap",
+      "Language : JavaScript"
+    ],
+    "slug": "the-record"
+  },
+  {
+    "id": 4,
+    "title": "Care Nepal",
+    "description": "Fighting poverty and social injustice through community-based efforts, health awareness and safe drinking water access.",
+    "image": "https://assets.rumsan.net/rumsan-group/portfolio-care-banner.jpg",
+    "subdescription": "CARE is a leading humanitarian organization committed to saving lives and fighting poverty and social injustice. Through community based efforts, CARE works to prevent spread of diseases, increase improved health awareness and access to safe drinking water and sanitation.",
+    "imagetitle": "https://assets.rumsan.net/rumsan-group/portfolio-care-banner.jpg",
+    "challenges": "Rural communities in Nepal lack access to clean water, proper sanitation, and health awareness programs. Traditional methods of community outreach are inefficient and don't scale well.",
+    "solutions": "<ul><li style='margin-left:20px; list-style: disc;'>Build digital platform for community program management.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Create mobile app for health awareness and education.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Implement data tracking for program impact measurement.</li></ul>",
+    "image1": "https://assets.rumsan.net/rumsan-group/portfolio-care-banner.jpg",
+    "image2": "",
+    "technology": [
+      "Database : MongoDB",
+      "Mobile : React Native",
+      "Backend : NodeJS",
+      "Styling : Bootstrap",
+      "Language : JavaScript"
+    ],
+    "slug": "care-nepal"
+  },
+  {
+    "id": 5,
+    "title": "Rahat",
+    "description": "Open-source blockchain-based platform supporting vulnerable communities with transparent token distribution.",
+    "image": "https://assets.rumsan.net/rumsan-group/portfolio-rahat-banner.jpg",
+    "subdescription": "Rahat is an open-source blockchain-based Cash and Voucher Assistance platform to support vulnerable communities. Rahat manages and monitors the flow of transactions in token distribution projects maintaining end-to-end transparency for humanitarian agencies.",
+    "imagetitle": "https://assets.rumsan.net/rumsan-group/portfolio-rahat-banner.jpg",
+    "challenges": "Traditional cash and voucher assistance programs lack transparency and are prone to corruption. Beneficiaries often don't receive their full entitlements, and agencies struggle to track distribution effectively.",
+    "solutions": "<ul><li style='margin-left:20px; list-style: disc;'>Implement blockchain technology for transparent transactions.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Create digital tokens for aid distribution.</li><li style='margin-left:20px; list-style: disc; margin-top: -5px;'>Build real-time monitoring and reporting dashboard.</li></ul>",
+    "image1": "https://assets.rumsan.net/rumsan-group/portfolio-rahat-banner.jpg",
+    "image2": "",
+    "technology": [
+      "Database : MongoDB",
+      "Frontend : React",
+      "Blockchain : Ethereum",
+      "Backend : NodeJS",
+      "Language : JavaScript"
+    ],
+    "slug": "rahat"
+  }
+]

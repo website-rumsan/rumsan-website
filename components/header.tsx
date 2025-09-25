@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
@@ -21,9 +21,11 @@ export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -36,6 +38,21 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        servicesDropdownRef.current &&
+        !servicesDropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const headerClass =
@@ -106,13 +123,53 @@ export default function Header() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              className="relative"
+              ref={servicesDropdownRef}
+              onMouseEnter={() => setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
-              <Link
-                href="/services"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium"
+              <button
+                className="flex items-center gap-1 text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium"
+                onClick={() =>
+                  setIsServicesDropdownOpen(!isServicesDropdownOpen)
+                }
               >
                 Services
-              </Link>
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${
+                    isServicesDropdownOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {isServicesDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg z-50"
+                  >
+                    <div className="py-2">
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-muted-foreground hover:bg-muted hover:text-black dark:hover:text-foreground transition-colors"
+                        onClick={() => setIsServicesDropdownOpen(false)}
+                      >
+                        <div className="font-medium">Rumsan Services</div>
+                      </Link>
+                      <Link
+                        href="/ai-solutions"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-muted-foreground hover:bg-muted hover:text-black dark:hover:text-foreground transition-colors"
+                        onClick={() => setIsServicesDropdownOpen(false)}
+                      >
+                        <div className="font-medium">AI Solutions</div>
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -198,12 +255,33 @@ export default function Header() {
               >
                 Career
               </Link>
-              <Link
-                href="/services"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-lg font-medium"
-              >
-                Services
-              </Link>
+              <div className="space-y-3">
+                <div className="text-gray-700 dark:text-muted-foreground text-lg font-medium">
+                  Services
+                </div>
+                <div className="pl-4 space-y-3">
+                  <Link
+                    href="/services"
+                    className="block text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium">Rumsan Services</div>
+                    <div className="text-sm text-muted-foreground mt-1">
+                      Our comprehensive digital solutions
+                    </div>
+                  </Link>
+                  <Link
+                    href="/ai-solutions"
+                    className="block text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium">AI Solutions</div>
+                    <div className="text-sm text-muted-foreground mt-1">
+                      Cutting-edge artificial intelligence
+                    </div>
+                  </Link>
+                </div>
+              </div>
               <Link
                 href="/contact"
                 className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-lg font-medium"

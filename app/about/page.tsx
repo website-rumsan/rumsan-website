@@ -449,7 +449,7 @@ export default function AboutPage() {
             {/* Navigation Buttons */}
             <motion.button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-slate-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C7F7FF]/50 hover:bg-[#C7F7FF]/30"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C7F7FF]/50 hover:bg-[#C7F7FF]/30"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -458,7 +458,7 @@ export default function AboutPage() {
 
             <motion.button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-slate-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C7F7FF]/50 hover:bg-[#C7F7FF]/30"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C7F7FF]/50 hover:bg-[#C7F7FF]/30"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -497,7 +497,7 @@ export default function AboutPage() {
                       className="group perspective-1000"
                       whileHover={{ y: -10, scale: 1.02 }}
                     >
-                      <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C7F7FF]/30 dark:border-slate-700 hover:border-[#C7F7FF]/60">
+                      <div className="relative bg-white/10 dark:bg-slate-800/10 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C7F7FF]/30 dark:border-slate-700 hover:border-[#C7F7FF]/60">
                         <div className="p-6">
                           {/* Profile Image - Perfect Circle Fit! */}
                           <div className="relative mb-8 mx-auto w-72 h-72">

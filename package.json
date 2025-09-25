@@ -13,6 +13,8 @@
     "@radix-ui/react-dialog": "latest",
     "@radix-ui/react-label": "latest",
     "@radix-ui/react-slot": "latest",
+    "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^1.10.68",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "latest",
@@ -21,6 +23,7 @@
     "next-themes": "latest",
     "react": "^18",
     "react-dom": "^18",
+    "react-use-measure": "^2.1.7",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },

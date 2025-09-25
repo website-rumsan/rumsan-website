@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { MapPin, Clock, Briefcase, GraduationCap, Users, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Header from "@/components/header"
-import Link from "next/link"
 
 export default function CareerPage() {
   return (
@@ -32,8 +31,7 @@ export default function CareerPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto text-pretty"
             >
-              Be part of a mission-driven team building AI solutions that create real impact for communities around the
-              world.
+              Be part of a mission-driven team building AI solutions that create real impact for communities around the world.
             </motion.p>
           </div>
         </div>
@@ -205,49 +203,10 @@ export default function CareerPage() {
                       </span>
                     </div>
                     <p className="text-muted-foreground text-sm">
-                      Lead the development of LLM-powered applications and AI automation tools. Work on cutting-edge
-                      projects that impact communities globally.
+                      Lead the development of LLM-powered applications and AI automation tools. Work on cutting-edge projects that impact communities globally.
                     </p>
                   </div>
-                  <Link href="/career/senior-ai-engineer">
-                    <Button className="md:ml-4">Apply Now</Button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-            >
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-colors">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="font-heading text-xl font-bold mb-2">AI Engineer</h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="h-4 w-4" />
-                        Kathmandu, Nepal / Remote
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        Full-time
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Briefcase className="h-4 w-4" />
-                        3+ years experience
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-sm">
-                      Develop and implement AI solutions for social impact projects. Work with modern AI frameworks and
-                      contribute to innovative applications.
-                    </p>
-                  </div>
-                  <Link href="/career/ai-engineer">
-                    <Button className="md:ml-4">Apply Now</Button>
-                  </Link>
+                  <Button className="md:ml-4">Apply Now</Button>
                 </div>
               </div>
             </motion.div>
@@ -277,13 +236,10 @@ export default function CareerPage() {
                       </span>
                     </div>
                     <p className="text-muted-foreground text-sm">
-                      Build scalable web applications using React, Node.js, and modern frameworks. Experience with AI
-                      integration is a plus.
+                      Build scalable web applications using React, Node.js, and modern frameworks. Experience with AI integration is a plus.
                     </p>
                   </div>
-                  <Link href="/career/full-stack-developer">
-                    <Button className="md:ml-4">Apply Now</Button>
-                  </Link>
+                  <Button className="md:ml-4">Apply Now</Button>
                 </div>
               </div>
             </motion.div>
@@ -313,13 +269,10 @@ export default function CareerPage() {
                       </span>
                     </div>
                     <p className="text-muted-foreground text-sm">
-                      Develop smart contracts and decentralized applications for social impact projects. Experience with
-                      Ethereum, Solidity required.
+                      Develop smart contracts and decentralized applications for social impact projects. Experience with Ethereum, Solidity required.
                     </p>
                   </div>
-                  <Link href="/career/blockchain-developer">
-                    <Button className="md:ml-4">Apply Now</Button>
-                  </Link>
+                  <Button className="md:ml-4">Apply Now</Button>
                 </div>
               </div>
             </motion.div>
@@ -349,13 +302,10 @@ export default function CareerPage() {
                       </span>
                     </div>
                     <p className="text-muted-foreground text-sm">
-                      Lead product strategy for our AI and blockchain solutions. Drive product vision from conception to
-                      deployment.
+                      Lead product strategy for our AI and blockchain solutions. Drive product vision from conception to deployment.
                     </p>
                   </div>
-                  <Link href="/career/product-manager">
-                    <Button className="md:ml-4">Apply Now</Button>
-                  </Link>
+                  <Button className="md:ml-4">Apply Now</Button>
                 </div>
               </div>
             </motion.div>
@@ -385,13 +335,10 @@ export default function CareerPage() {
                       </span>
                     </div>
                     <p className="text-muted-foreground text-sm">
-                      Design intuitive user experiences for complex AI and blockchain applications. Focus on
-                      accessibility and user-centered design.
+                      Design intuitive user experiences for complex AI and blockchain applications. Focus on accessibility and user-centered design.
                     </p>
                   </div>
-                  <Link href="/career/ux-ui-designer">
-                    <Button className="md:ml-4">Apply Now</Button>
-                  </Link>
+                  <Button className="md:ml-4">Apply Now</Button>
                 </div>
               </div>
             </motion.div>
@@ -586,16 +533,17 @@ export default function CareerPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Don't See a Perfect Match?</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+              Don't See a Perfect Match?
+            </h2>
             <p className="text-muted-foreground mb-8 text-lg max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about using technology for social good.
-              Send us your resume!
+              We're always looking for talented individuals who are passionate about using technology for social good. Send us your resume!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="px-8 py-4">
                 Send Your Resume
               </Button>
-              <Button size="lg" variant="outline" className="px-8 py-4 bg-transparent">
+              <Button size="lg" variant="outline" className="px-8 py-4">
                 Learn About Our Culture
               </Button>
             </div>

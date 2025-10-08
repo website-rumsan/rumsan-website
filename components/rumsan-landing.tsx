@@ -282,7 +282,7 @@ export default function RumsanLanding() {
                   </li>
                 </ul>
                 <div className="flex gap-4">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button className="bg-gradient-to-r from-[#3EC4EE] to-[#253E93] hover:from-[#C7F7FF] hover:to-[#3EC4EE] transition-all duration-300 shadow-lg hover:shadow-xl">
                     Learn More
                   </Button>
                   <Button
@@ -330,7 +330,7 @@ export default function RumsanLanding() {
                   </li>
                 </ul>
                 <div className="flex gap-4">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button className="bg-gradient-to-r from-[#3EC4EE] to-[#253E93] hover:from-[#C7F7FF] hover:to-[#3EC4EE] transition-all duration-300 shadow-lg hover:shadow-xl">
                     Learn More
                   </Button>
                   <Button

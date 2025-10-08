@@ -77,12 +77,12 @@ export default function Header() {
               <img
                 src="https://assets.rumsan.net/rahat/rumsan-logo.png"
                 alt="Rumsan Logo"
-                className="h-16 w-auto"
+                className="h-12 sm:h-14 md:h-16 w-auto"
               />
             </Link>
           </motion.div>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function Header() {
             >
               <Link
                 href="/about"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium"
+                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium whitespace-nowrap"
               >
                 About Us
               </Link>
@@ -102,7 +102,7 @@ export default function Header() {
             >
               <Link
                 href="/portfolio"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium"
+                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium whitespace-nowrap"
               >
                 Portfolio
               </Link>
@@ -114,7 +114,7 @@ export default function Header() {
             >
               <Link
                 href="/career"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium"
+                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium whitespace-nowrap"
               >
                 Career
               </Link>
@@ -178,7 +178,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium"
+                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm font-medium whitespace-nowrap"
               >
                 Contact Us
               </Link>
@@ -189,13 +189,13 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-2 sm:gap-3"
           >
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="hidden md:flex"
+              className="hidden lg:flex"
             >
               {mounted && theme === "light" ? (
                 <Moon className="h-4 w-4" />
@@ -205,15 +205,16 @@ export default function Header() {
               <span className="sr-only">Toggle theme</span>
             </Button>
             <Button
-              className="hidden md:flex bg-secondary text-secondary-foreground hover:bg-secondary/90"
+              className="hidden lg:flex bg-gradient-to-r from-[#3EC4EE] to-[#253E93] hover:from-[#C7F7FF] hover:to-[#3EC4EE] transition-all duration-300 text-xs xl:text-sm px-3 xl:px-4"
               onClick={() => setIsModalOpen(true)}
             >
-              Book AI Consultation
+              <span className="hidden xl:inline">Book AI Consultation</span>
+              <span className="xl:hidden">Book Demo</span>
             </Button>
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -234,80 +235,89 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-[72px] left-0 right-0 z-40 bg-background border-b border-border md:hidden"
+            className="fixed top-[72px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border lg:hidden"
           >
-            <div className="container mx-auto px-4 py-6 flex flex-col gap-6">
-              <Link
-                href="/about"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-lg font-medium"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/portfolio"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-lg font-medium"
-              >
-                Portfolio
-              </Link>
-              <Link
-                href="/career"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-lg font-medium"
-              >
-                Career
-              </Link>
-              <div className="space-y-3">
-                <div className="text-gray-700 dark:text-muted-foreground text-lg font-medium">
-                  Services
-                </div>
-                <div className="pl-4 space-y-3">
+            <div className="container mx-auto px-4 py-4 sm:py-6">
+              <div className="grid grid-cols-1 gap-4 sm:gap-6">
+                <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-col sm:gap-6">
                   <Link
-                    href="/services"
-                    className="block text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base"
+                    href="/about"
+                    className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base sm:text-lg font-medium py-2 px-3 rounded-lg hover:bg-muted/50"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="font-medium">Rumsan Services</div>
-                    <div className="text-sm text-muted-foreground mt-1">
-                      Our comprehensive digital solutions
-                    </div>
+                    About Us
                   </Link>
                   <Link
-                    href="/ai-solutions"
-                    className="block text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base"
+                    href="/portfolio"
+                    className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base sm:text-lg font-medium py-2 px-3 rounded-lg hover:bg-muted/50"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="font-medium">AI Solutions</div>
-                    <div className="text-sm text-muted-foreground mt-1">
-                      Cutting-edge artificial intelligence
-                    </div>
+                    Portfolio
+                  </Link>
+                  <Link
+                    href="/career"
+                    className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base sm:text-lg font-medium py-2 px-3 rounded-lg hover:bg-muted/50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Career
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-base sm:text-lg font-medium py-2 px-3 rounded-lg hover:bg-muted/50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Contact Us
                   </Link>
                 </div>
-              </div>
-              <Link
-                href="/contact"
-                className="text-gray-700 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-lg font-medium"
-              >
-                Contact Us
-              </Link>
-              <div className="flex items-center gap-3">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-                  className="flex-shrink-0"
-                >
-                  {mounted && theme === "light" ? (
-                    <Moon className="h-4 w-4" />
-                  ) : (
-                    <Sun className="h-4 w-4" />
-                  )}
-                  <span className="sr-only">Toggle theme</span>
-                </Button>
-                <Button
-                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex-1"
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  Book AI Consultation
-                </Button>
+
+                <div className="space-y-3 border-t border-border pt-4">
+                  <div className="text-gray-700 dark:text-muted-foreground text-base sm:text-lg font-medium px-3">
+                    Services
+                  </div>
+                  <div className="grid grid-cols-1 gap-2 pl-3">
+                    <Link
+                      href="/services"
+                      className="block text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm sm:text-base py-2 px-3 rounded-lg hover:bg-muted/50"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <div className="font-medium">Rumsan Services</div>
+                    </Link>
+                    <Link
+                      href="/ai-solutions"
+                      className="block text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition-colors text-sm sm:text-base py-2 px-3 rounded-lg hover:bg-muted/50"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <div className="font-medium">AI Solutions</div>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between gap-3 border-t border-border pt-4">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() =>
+                      setTheme(theme === "light" ? "dark" : "light")
+                    }
+                    className="flex-shrink-0"
+                  >
+                    {mounted && theme === "light" ? (
+                      <Moon className="h-4 w-4" />
+                    ) : (
+                      <Sun className="h-4 w-4" />
+                    )}
+                    <span className="sr-only">Toggle theme</span>
+                  </Button>
+                  <Button
+                    className="bg-gradient-to-r from-[#3EC4EE] to-[#253E93] hover:from-[#C7F7FF] hover:to-[#3EC4EE] transition-all duration-300 flex-1 text-sm"
+                    onClick={() => {
+                      setIsModalOpen(true);
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    Book AI Consultation
+                  </Button>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -366,7 +376,7 @@ export default function Header() {
               Cancel
             </Button>
             <Button
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-gradient-to-r from-[#3EC4EE] to-[#253E93] hover:from-[#C7F7FF] hover:to-[#3EC4EE] transition-all duration-300"
               onClick={() => {
                 alert(
                   "Thank you for your interest! We'll be in touch soon to schedule your AI consultation."
